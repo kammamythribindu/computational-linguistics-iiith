@@ -1,0 +1,38 @@
+Goal1: UNDERSTAND THE EXPERIMENT.
+HTML and JS Functionalities that are required for Goal-1 are: 
+
+Functionality-1: Virtual lab LOGO in top left corner --> on click should redirect to vitual labs home page.
+
+Functionality-2: The IIIT-H logo and the respective text on the top right corner --> should redirect to IIIT-H webpage on Click .
+
+Functionality-3: COMPUTATIONAL LINGUISTICS LAB button --> on click should redirect to computaional linguistics lab homepage.
+
+Functionality-4: A Breadcrumb Navigational bar --> should have 3 links namely Home ,Computational linguistics lab,Forming sentences-2 which on click should redirect to respective webpages.
+
+Functionality-5: A navigation bar with 6 tabs(with icons and respective links included) --> on clicking each tab they should redirect to respective pages.
+                 Icon-1: INTRODUCTION.
+                 Icon-2: THEORY.
+                 Icon-3: OBJECTIVE .
+                 Icon-4: EXPERIMENT.
+                 Icon-5: QUIZZES. 
+                 Icon-6: PROCEDURE.
+                 All icons should provide a theoritical description of what is the simulation experiment is about except Icon-6 of navigation bar i.e.,EXPERIMENT tab--> on clicking should redirect to itself
+                 to the same page which contains a dropdown bar.
+
+Functionality-6: DropDown bar -->should contain 2 options to select.
+                 option 1 : ENGLISH.
+                 option 2: HINDI.
+                 When We select any of the above options,a random sentence in English/HINDI which is jumbled should be displayed with a message "Form a sentence (Declarative or Interrogative or any other type) from the given words(select the buttons in proper order)" . There should be clickable buttons appeared pertaining to each word in the sentence.
+
+Functionality-7: Clickable buttons with words of a sentence --> When clicked on any of the words, word gets removed from the jumbled sentence and another message comes i.e. Formed Sentence (after selecting words).It should come along with the clicked word we chose below it.
+
+Functionality-8: Clickable button named 'Re-form the sentence'(Reset button functionality) --> Should appear after clicking the any of the jumbled words and should remain till we refresh.When we click on it ,again the sentence is jumbled .Functionality-9: Clickable button named 'Check the correcteness of this sentence' --> Should appear only after slecting/clicking all the jumbled words.When the sentence is in correct order,a message 'Right Answer!' is displayed and if it is wrong then 'Wrong Aswer' is displayed along with a clickable button named 'Get correct sentence' .
+
+Functionality-9: Clickable button named 'Get correct Sentence'(hide and display or toggle functionality) -->On click should display the correct sentence below it.Also the button should change to 'Hide the correct sentence',on futher click it should change to 'Get Answers'.Whenever we click on this button it should its functionality and navigate between the two cases i.e.,hiding and showing the correct sentence.
+
+Functionality-10: Pop-up/alert: Should display when no option for language is selected ,saying that 'Select Language'.                          
+
+
+
+
+ 
