@@ -23,3 +23,19 @@ var hindi=[["राम और श्याम बाजार गयें","र
             ["एक लाल किताब वहाँ है","एक लाल किताब है वहाँ","वहाँ है एक लाल किताब","है वहाँ एक लाल किताब"],
             ["एक बड़ी सी किताब वहाँ है",	"एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब",
             "वहाँ है बड़ी सी एक किताब","है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]];
+
+ function dropfunc()
+ {
+        var x = document.getElementById("selectbox").value;
+        if(x=="English"||x=="Hindi")
+        {
+        document.getElementById("para1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
+        document.getElementById("para2").innerHTML = "(select the buttons in proper order)";
+                
+        }
+        else
+        {
+         alert("Select Language");
+         return false;
+        }
+}

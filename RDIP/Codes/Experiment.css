@@ -1,0 +1,29 @@
+h2{
+  font: 24px verdana,sans-serif;
+}
+.container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+p
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ #para1 {
+  font:18px Arial,sans-serif;
+  color:rgb(10, 40, 180);
+  font-weight:550;
+  
+
+}
+#para2 {
+  font:16px Arial,sans-serif;
+  color:blue;
+  font-style:oblique;
+  
+
+}

@@ -4,12 +4,23 @@
   <title>Virtual Labs</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="Experiment.css">
 </head>
 
 <body>
-    <h2>Experiment simulation</h2>
-    <p><strong>Creating arrays and storing sentences</strong></p>
+    <h2>Experiment</h2>
+    <div class="container">
+    <select id="selectbox" onchange="dropfunc()" class="drop">
+      <option value="language">---Select Language---</option>
+      <option value="English" >English</option>
+      <option value="Hindi">Hindi</option>
+    </select>
+    </div>
+    
+  
     <script src="Experiment.js" type="text/javascript"></script>
+    <p id="para1"></p>
+    <p id="para2"></p>
 
 
   
