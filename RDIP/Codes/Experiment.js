@@ -31,11 +31,59 @@ var hindi=[["राम और श्याम बाजार गयें","र
         {
         document.getElementById("para1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
         document.getElementById("para2").innerHTML = "(select the buttons in proper order)";
-                
-        }
+        rand(x);
+        return true;
+      }
         else
         {
          alert("Select Language");
          return false;
         }
+      
+      
+       
 }
+function rand(x){
+  var randomSentence;
+  if(x=="English"){
+     randomSentence = english[Math.floor(Math.random() * english.length)];
+     
+  }
+  else{
+     randomSentence = hindi[Math.floor(Math.random() * hindi.length)];
+    
+  }
+  console.log(randomSentence);
+ var random2 = randomSentence[0];
+  console.log(random2);
+
+var last=random2.trim().split(" ");
+
+console.log(last);
+randWord(last);
+console.log(last);
+last.splice(0, last.length)
+console.log(last);
+
+
+}
+function randWord(last){
+
+
+  var ctr = last.length, temp, index;
+
+  while (ctr > 0) {
+      index = Math.floor(Math.random() * ctr);
+
+      ctr--;
+      temp = last[ctr];
+      last[ctr] = last[index];
+      last[index] = temp;
+  }
+  for (var i = 0; i < last.length; i++) {
+    document.getElementById("more").innerHTML += "<button>" + last[i]  + "</button>" + "&nbsp"+"&nbsp;";
+  }
+
+ 
+}
+
