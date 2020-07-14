@@ -51,6 +51,8 @@ function rand(x){
      document.getElementById("more").innerHTML="";
      document.getElementById("myDIV").innerHTML="";
      document.getElementById("reform").innerHTML="";
+     document.getElementById("para3").innerHTML ="";
+     document.getElementById("para4").innerHTML ="";
     
   }
   else if(x=="Hindi"){
@@ -58,7 +60,10 @@ function rand(x){
      document.getElementById("more").innerHTML="";
      document.getElementById("myDIV").innerHTML="";
      document.getElementById("reform").innerHTML="";
+     document.getElementById("para3").innerHTML ="";
+     document.getElementById("para4").innerHTML ="";
   }
+
 
     console.log(randomSentence);
     var random2 = randomSentence[0];
@@ -68,8 +73,9 @@ function rand(x){
     
     console.log(last);
     randWord(last);
-    console.log(last);
+    //console.log(last);
 }
+
 function randWord(last)
 {
 
@@ -84,9 +90,11 @@ function randWord(last)
           last[ctr] = last[index];
           last[index] = temp;
       }
-      for (var i = 0; i < last.length; i++) {
-        document.getElementById("more").innerHTML += "<button type='button' value='"+last[i]+"' id='"+i+"' >" + last[i]  + "</button>" + "&nbsp"+"&nbsp;";
+        sru=last;
+        for (var i = 0; i < last.length; i++) {
+        document.getElementById("more").innerHTML += "<button type='button' value='"+last[i]+"' id='"+i+"' >" + last[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
       }
+    
      
      
      
@@ -115,7 +123,7 @@ function check(num)
  var len=elements.length;
   document.getElementById("para3").innerHTML ="Formed Sentence";
   document.getElementById("para4").innerHTML ="(after selecting words)";
-  document.getElementById("reform").innerHTML="<button type='button' >" +" Re-form the sentence" + "</button>";
+  document.getElementById("reform").innerHTML="<input type='reset' value='Re-form the sentence' onclick='rearrange(sru)'>";
    if(len!==0)
    {
         var arr = document.createElement("P");
@@ -123,13 +131,26 @@ function check(num)
         arr.appendChild(t);
         document.getElementById("myDIV").appendChild(arr);
         var span = document.createElement("span");
-        span.innerHTML = "&nbsp;"; 
+        span.innerHTML = "&nbsp;&nbsp;"; 
         document.getElementById("myDIV").appendChild(span);
         
     }
        len--;
        
       
+}
+function rearrange(sru)
+{
+  document.getElementById("myDIV").innerHTML="";
+  document.getElementById("para3").innerHTML ="";
+  document.getElementById("para4").innerHTML ="";
+  document.getElementById("reform").innerHTML ="";
+  document.getElementById("more").innerHTML ="";
+  
+  for (var i = 0; i < sru.length; i++) {
+    document.getElementById("more").innerHTML += "<button type='button' value='"+sru[i]+"' id='"+i+"' >" + sru[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
+  }
+ 
 }
 
 

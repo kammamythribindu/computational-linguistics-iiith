@@ -12,6 +12,7 @@ p
   display:flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0px;
  }
  #para1 {
   font:18px Arial,sans-serif;
@@ -37,6 +38,7 @@ p
   font:18px Arial,sans-serif;
   color:rgb(10, 40, 180);
   font-weight:550;
+
   
 
 }
@@ -44,6 +46,7 @@ p
   font:16px Arial,sans-serif;
   color:blue;
   font-style:oblique;
+
   
 
 }
@@ -56,17 +59,17 @@ p
   margin:auto;
   border: none;
  }
- #myDIV
+h1
 {
   display:flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font:Arial,verdana;
-  max-width: 400px;
-  margin:auto;
+  font:32px verdana,sans-serif;
+  margin-top:-15px;
   border: none;
-  padding:none;
+  line-height: 0px;
+  padding:0px 0px 0px 0px;
  }
+ 
  
  
