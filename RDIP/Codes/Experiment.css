@@ -9,7 +9,7 @@ h2{
  }
 p
 {
-  display: flex;
+  display:flex;
   align-items: center;
   justify-content: center;
  }
@@ -33,3 +33,40 @@ p
   align-items: center;
   justify-content: center;
  }
+#para3 {
+  font:18px Arial,sans-serif;
+  color:rgb(10, 40, 180);
+  font-weight:550;
+  
+
+}
+#para4 {
+  font:16px Arial,sans-serif;
+  color:blue;
+  font-style:oblique;
+  
+
+}
+#reform
+{ 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin:auto;
+  border: none;
+ }
+ #myDIV
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font:Arial,verdana;
+  max-width: 400px;
+  margin:auto;
+  border: none;
+  padding:none;
+ }
+ 
+ 
