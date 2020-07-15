@@ -53,6 +53,7 @@ function rand(x){
      document.getElementById("reform").innerHTML="";
      document.getElementById("para3").innerHTML ="";
      document.getElementById("para4").innerHTML ="";
+     document.getElementById("correct").innerHTML ="";
     
   }
   else if(x=="Hindi"){
@@ -62,6 +63,7 @@ function rand(x){
      document.getElementById("reform").innerHTML="";
      document.getElementById("para3").innerHTML ="";
      document.getElementById("para4").innerHTML ="";
+     document.getElementById("correct").innerHTML ="";
   }
 
 
@@ -99,6 +101,7 @@ function randWord(last)
      
      
 }
+var str1=[];
 window.onload = myMain;
 
 function myMain() {
@@ -110,14 +113,21 @@ function buton(e) {
   if (e.target.tagName == 'BUTTON') {
     document.getElementById(e.target.id).style.display="none";
     var num=document.getElementById(e.target.id).value;
+    var str=num;
+
+    str1.push(str);
+      
+    console.log(str1);
   // console.log(num);
    // console.log(typeof(num));
     check(num);
   }
 }
-    
+ var count=0;  
+ // m=1; 
 function check(num)
 {
+  //var str=num;
   var elements = document.getElementsByTagName("button");
  console.log(elements.length);
  var len=elements.length;
@@ -128,14 +138,34 @@ function check(num)
    {
         var arr = document.createElement("P");
         var t = document.createTextNode(num);
+        //var att = document.createAttribute("id");
+        //att.value = "P"+m;
+        //arr.setAttributeNode(att);
         arr.appendChild(t);
         document.getElementById("myDIV").appendChild(arr);
         var span = document.createElement("span");
         span.innerHTML = "&nbsp;&nbsp;"; 
         document.getElementById("myDIV").appendChild(span);
-        
+       // len--;
+        count++;
+        //m++;
     }
-       len--;
+    
+      
+     
+
+
+   // console.log(len);
+    //console.log(count);
+    if(sru.length==count){
+      document.getElementById("correct").innerHTML="<input type='submit' value='Check the correctness of this sentence' onclick='myFunction()'>";
+      
+      
+    }
+  
+
+       
+
        
       
 }
@@ -146,13 +176,19 @@ function rearrange(sru)
   document.getElementById("para4").innerHTML ="";
   document.getElementById("reform").innerHTML ="";
   document.getElementById("more").innerHTML ="";
+  document.getElementById("correct").innerHTML ="";
+  str1=[];
+  count=0;
   
   for (var i = 0; i < sru.length; i++) {
     document.getElementById("more").innerHTML += "<button type='button' value='"+sru[i]+"' id='"+i+"' >" + sru[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
   }
  
 }
-
+function myFunction(){
+  var userString = str1.join(" ");
+  console.log(userString);
+  }
 
 
 

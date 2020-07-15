@@ -70,6 +70,15 @@ h1
   line-height: 0px;
   padding:0px 0px 0px 0px;
  }
+ #correct
+{ 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin:auto;
+  border: none;
+ }
  
  
  
