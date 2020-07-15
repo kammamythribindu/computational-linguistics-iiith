@@ -1,3 +1,4 @@
+//declaring and initializing the corpus of sentences both english and hindi
 var english=[["John ate an apple before afternoon",	"before afternoon John ate an apple", "John before afternoon ate an apple"],
             ["some students like to study In the night","at night some students like to study"],
             ["John and Mary went to church","Mary and John went to church"],
@@ -24,14 +25,14 @@ var hindi=[["राम और श्याम बाजार गयें","र
             ["एक बड़ी सी किताब वहाँ है",	"एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब",
             "वहाँ है बड़ी सी एक किताब","है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]];
 
- function dropfunc()
+ function dropfunc()   //executes after drop down selection
  {
-        var x = document.getElementById("selectbox").value;
-        if(x=="English"||x=="Hindi")
+        var x = document.getElementById("selectbox").value; //retrives the selected value
+        if(x=="English"||x=="Hindi")  //checks the retrieved value
         {
         document.getElementById("para1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
         document.getElementById("para2").innerHTML = "(select the buttons in proper order)";
-        rand(x);
+        rand(x); 
         
         return true;
       }
@@ -42,8 +43,8 @@ var hindi=[["राम और श्याम बाजार गयें","र
         }
       
 }
-var original;
-function myClear(){
+var original; //acts as global variable
+function myClear(){ //helps to clear all the data by equating the elements data dynamically to ""
   document.getElementById("more").innerHTML="";
   document.getElementById("myDIV").innerHTML="";
   document.getElementById("reform").innerHTML="";
@@ -56,20 +57,20 @@ function myClear(){
   str1=[];
   count=0;
 }
-function rand(x){
+function rand(x){  //executes if selected option is either english or hindi
   var randomSentence;
   if(x=="English"){
-     randomSentence = english[Math.floor(Math.random() * english.length)];
+     randomSentence = english[Math.floor(Math.random() * english.length)];  //random sentence is selected
      document.getElementById("corpus").innerHTML="";
      myClear();
     
   }
   else if(x=="Hindi"){
-     randomSentence = hindi[Math.floor(Math.random() * hindi.length)];
+     randomSentence = hindi[Math.floor(Math.random() * hindi.length)];   //random sentence selected
      document.getElementById("corpus").innerHTML="";
      myClear();
   }
-    console.log(randomSentence);
+    console.log(randomSentence);    //prints output in console
     original=randomSentence;
     console.log(original);
     for(var w=0;w<original.length;w++){
@@ -78,20 +79,20 @@ function rand(x){
     var random2 = randomSentence[0];
     console.log(random2);
     
-    var last=random2.trim().split(" ");
+    var last=random2.trim().split(" ");  //splitting the sentence and converting to array
     
     console.log(last);
     randWord(last);
     //console.log(last);
 }
 
-function randWord(last)
+function randWord(last)  //splitted array is passed 
 {
 
 
       var ctr = last.length, temp, index;
     
-      while (ctr > 0) {
+      while (ctr > 0) {    //the array is jumbled
           index = Math.floor(Math.random() * ctr);
     
           ctr--;
@@ -100,7 +101,7 @@ function randWord(last)
           last[index] = temp;
       }
         sru=last;
-        for (var i = 0; i < last.length; i++) {
+        for (var i = 0; i < last.length; i++) {    //printing all the jumbled words as buttons
         document.getElementById("more").innerHTML += "<button type='button' value='"+last[i]+"' id='"+i+"' >" + last[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
       }     
 }
@@ -112,7 +113,7 @@ function myMain() {
 
 }
 
-function buton(e) {
+function buton(e) {      //helps to know which button is clicked and makes it disappear
   if (e.target.tagName == 'BUTTON') {
     document.getElementById(e.target.id).style.display="none";
     var num=document.getElementById(e.target.id).value;
@@ -126,7 +127,7 @@ function buton(e) {
 }
 var count=0;  
  
-function check(num)
+function check(num)   
 {
   
   var elements = document.getElementsByTagName("button");
@@ -134,8 +135,8 @@ function check(num)
  var len=elements.length;
   document.getElementById("para3").innerHTML ="Formed Sentence"+"&nbsp;";
   document.getElementById("para4").innerHTML ="(after selecting words):";
-  document.getElementById("reform").innerHTML="<input type='reset' value='Re-form the sentence' onclick='rearrange(sru)'>";
-   if(len!==0)
+  document.getElementById("reform").innerHTML="<input type='reset' value='Re-form the sentence' onclick='rearrange(sru)'>"; //reform button triggers here
+   if(len!==0)      //all the words are printed as sentence by appending dynamically
    {
         var arr = document.createElement("P");
         var t = document.createTextNode(num);
@@ -153,11 +154,11 @@ function check(num)
     }
    console.log(sru.length);
     console.log(count);
-    if(sru.length==count){
+    if(sru.length==count){  //check correctness button triggers here
       document.getElementById("correct").innerHTML="<input type='submit' value='Check the correctness of this sentence' onclick='myFunction(original)'>";  
     }
 }
-function rearrange(sru)
+function rearrange(sru) //executes when reform button clicked 
 {
   myClear();
   document.getElementById("corpus").style.display="none";
@@ -166,7 +167,7 @@ function rearrange(sru)
   }
  
 }
-function myFunction(original){
+function myFunction(original){ //used completely for checking the correctness of sentence 
   var userString = str1.join(" ");
   console.log(userString);
   var flag=0;
@@ -188,13 +189,13 @@ function myFunction(original){
     document.getElementById("finalbutton").innerHTML="<input type='submit' id='res' value='Get Correct Sentence'  onclick='hideShow()'>";
   }
 }
-function hideShow(){
+function hideShow(){  //hide button appears and corpus of sentences appear
   document.getElementById("finalbutton").innerHTML="";
   document.getElementById("corpus").style.display="block";
   document.getElementById("finalbutton").innerHTML="<input type='submit'  value='Hide the correct Sentence'  onclick='mythri()'>";
  
 }
-function mythri(){
+function mythri(){ //get answers button appears and corpus becomes hidden
   document.getElementById("finalbutton").innerHTML="";
   document.getElementById("corpus").style.display="none";
   document.getElementById("finalbutton").innerHTML="<input type='submit'  value='Get Answers'  onclick='hideShow()'>";
