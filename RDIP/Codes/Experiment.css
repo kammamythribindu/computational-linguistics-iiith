@@ -1,4 +1,5 @@
-h2{
+h2
+{
   font: 24px verdana,sans-serif;
 }
 .container
@@ -6,31 +7,33 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
- }
+}
+
 p
 {
   display:flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0px;
- }
- #para1 {
+}
+
+ #para1
+{
   font:18px;
   color:rgb(10, 40, 180);
   font-weight:bold;
   font-family:'Lucida Sans Unicode';
-  
-
 }
-#para2 {
+
+#para2
+ {
   margin-top:0px;
   font:8px ;
   color:blue;
   font-style:oblique;
   font-family:'Lucida Sans Unicode';
-  
-
 }
+
 #more
 { 
   margin-top: -10px;
@@ -38,27 +41,26 @@ p
   display: flex;
   align-items: center;
   justify-content: center;
- }
-#para3 {
+}
+
+#para3 
+{
   margin-top: -5px;
   font:18px;
   color:rgb(10, 40, 180);
   font-weight:bold;
   font-family:'Lucida Sans Unicode';
-
-  
-
 }
-#para4 {
+
+#para4 
+{
   margin-top: -5px;
   font:13px;
   color:blue;
   font-style:oblique;
   font-family:'Lucida Sans Unicode';
-
-  
-
 }
+
 #reform
 { 
   display:flex;
@@ -67,7 +69,8 @@ p
   max-width: 500px;
   margin:auto;
   border: none;
- }
+}
+
 h1
 {
   display:flex;
@@ -81,8 +84,9 @@ h1
   border: none;
   line-height: 0px;
   padding:0px 0px 0px 0px;
- }
- #correct
+}
+
+#correct
 { 
   display:flex;
   align-items: center;
@@ -90,9 +94,10 @@ h1
   max-width: 500px;
   margin:auto;
   border: none;
- }
- h3
- { 
+}
+
+h3
+{ 
    display:flex;
    align-items: center;
    justify-content: center;
@@ -102,11 +107,13 @@ h1
    font-size: 2em;
    font-weight: 500;
    font-family:'Lucida Sans Unicode';
-  }
-  #res
-  {
+}
+
+#res
+{
     margin-top: -5px;
-  }
+}
+
 #finalbutton
 { 
   display:flex;
@@ -116,10 +123,10 @@ h1
   margin:auto;
   border: none;
   padding: 0px;
- }
+}
 
- #corpus
- {
+#corpus
+{
    display:none;
    font-family:'Lucida Sans Unicode';
    font:32px ;
@@ -127,7 +134,7 @@ h1
    line-height: 10px;
    border: none;
    padding:0px 0px 0px 0px;
- }
+}
 
 
  
