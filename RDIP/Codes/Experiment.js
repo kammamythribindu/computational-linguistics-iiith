@@ -52,6 +52,7 @@ function myClear(){
   document.getElementById("correct").innerHTML ="";
   document.getElementById("result").innerHTML="";
   document.getElementById("finalbutton").innerHTML="";
+  
   str1=[];
   count=0;
 }
@@ -59,16 +60,21 @@ function rand(x){
   var randomSentence;
   if(x=="English"){
      randomSentence = english[Math.floor(Math.random() * english.length)];
+     document.getElementById("corpus").innerHTML="";
      myClear();
     
   }
   else if(x=="Hindi"){
      randomSentence = hindi[Math.floor(Math.random() * hindi.length)];
+     document.getElementById("corpus").innerHTML="";
      myClear();
   }
     console.log(randomSentence);
     original=randomSentence;
     console.log(original);
+    for(var w=0;w<original.length;w++){
+      document.getElementById("corpus").innerHTML+="<p>" + original[w]  + "</p>";
+    }
     var random2 = randomSentence[0];
     console.log(random2);
     
@@ -119,10 +125,10 @@ function buton(e) {
   }
 }
 var count=0;  
- // m=1; 
+ 
 function check(num)
 {
-  //var str=num;
+  
   var elements = document.getElementsByTagName("button");
  console.log(elements.length);
  var len=elements.length;
@@ -141,9 +147,9 @@ function check(num)
         var span = document.createElement("span");
         span.innerHTML = "&nbsp;"; 
         document.getElementById("myDIV").appendChild(span);
-       // len--;
+      
         count++;
-        //m++;
+        
     }
    console.log(sru.length);
     console.log(count);
@@ -154,6 +160,7 @@ function check(num)
 function rearrange(sru)
 {
   myClear();
+  document.getElementById("corpus").style.display="none";
   for (var i = 0; i < sru.length; i++) {
     document.getElementById("more").innerHTML += "<button type='button' value='"+sru[i]+"' id='"+i+"' >" + sru[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
   }
@@ -177,9 +184,22 @@ function myFunction(original){
   else{
     document.getElementById("result").innerHTML="Wrong answer!!!";
     document.getElementById("result").style.color="red";
-    document.getElementById("finalbutton").innerHTML="<input type='submit' value='Get Correct Sentence'>";
+    document.getElementById("corpus").style.display="none";
+    document.getElementById("finalbutton").innerHTML="<input type='submit' id='res' value='Get Correct Sentence'  onclick='hideShow()'>";
   }
 }
-
+function hideShow(){
+  document.getElementById("finalbutton").innerHTML="";
+  document.getElementById("corpus").style.display="block";
+  document.getElementById("finalbutton").innerHTML="<input type='submit'  value='Hide the correct Sentence'  onclick='mythri()'>";
+ 
+}
+function mythri(){
+  document.getElementById("finalbutton").innerHTML="";
+  document.getElementById("corpus").style.display="none";
+  document.getElementById("finalbutton").innerHTML="<input type='submit'  value='Get Answers'  onclick='hideShow()'>";
+}
+  
+  
 
 

@@ -103,6 +103,10 @@ h1
    font-weight: 500;
    font-family:'Lucida Sans Unicode';
   }
+  #res
+  {
+    margin-top: -5px;
+  }
 #finalbutton
 { 
   display:flex;
@@ -113,7 +117,19 @@ h1
   border: none;
   padding: 0px;
  }
-  
+
+ #corpus
+ {
+   display:none;
+   font-family:'Lucida Sans Unicode';
+   font:32px ;
+   margin:auto;
+   line-height: 10px;
+   border: none;
+   padding:0px 0px 0px 0px;
+ }
+
+
  
  
  
