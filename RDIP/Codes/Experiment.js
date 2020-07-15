@@ -41,33 +41,33 @@ var hindi=[["राम और श्याम बाजार गयें","र
          return false;
         }
       
-      
-       
+}
+var original;
+function myClear(){
+  document.getElementById("more").innerHTML="";
+  document.getElementById("myDIV").innerHTML="";
+  document.getElementById("reform").innerHTML="";
+  document.getElementById("para3").innerHTML ="";
+  document.getElementById("para4").innerHTML ="";
+  document.getElementById("correct").innerHTML ="";
+  document.getElementById("result").innerHTML="";
+  str1=[];
+  count=0;
 }
 function rand(x){
   var randomSentence;
   if(x=="English"){
      randomSentence = english[Math.floor(Math.random() * english.length)];
-     document.getElementById("more").innerHTML="";
-     document.getElementById("myDIV").innerHTML="";
-     document.getElementById("reform").innerHTML="";
-     document.getElementById("para3").innerHTML ="";
-     document.getElementById("para4").innerHTML ="";
-     document.getElementById("correct").innerHTML ="";
+     myClear();
     
   }
   else if(x=="Hindi"){
      randomSentence = hindi[Math.floor(Math.random() * hindi.length)];
-     document.getElementById("more").innerHTML="";
-     document.getElementById("myDIV").innerHTML="";
-     document.getElementById("reform").innerHTML="";
-     document.getElementById("para3").innerHTML ="";
-     document.getElementById("para4").innerHTML ="";
-     document.getElementById("correct").innerHTML ="";
+     myClear();
   }
-
-
     console.log(randomSentence);
+    original=randomSentence;
+    console.log(original);
     var random2 = randomSentence[0];
     console.log(random2);
     
@@ -95,11 +95,7 @@ function randWord(last)
         sru=last;
         for (var i = 0; i < last.length; i++) {
         document.getElementById("more").innerHTML += "<button type='button' value='"+last[i]+"' id='"+i+"' >" + last[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
-      }
-    
-     
-     
-     
+      }     
 }
 var str1=[];
 window.onload = myMain;
@@ -114,16 +110,14 @@ function buton(e) {
     document.getElementById(e.target.id).style.display="none";
     var num=document.getElementById(e.target.id).value;
     var str=num;
-
     str1.push(str);
-      
     console.log(str1);
   // console.log(num);
    // console.log(typeof(num));
     check(num);
   }
 }
- var count=0;  
+var count=0;  
  // m=1; 
 function check(num)
 {
@@ -131,8 +125,8 @@ function check(num)
   var elements = document.getElementsByTagName("button");
  console.log(elements.length);
  var len=elements.length;
-  document.getElementById("para3").innerHTML ="Formed Sentence";
-  document.getElementById("para4").innerHTML ="(after selecting words)";
+  document.getElementById("para3").innerHTML ="Formed Sentence"+"&nbsp;";
+  document.getElementById("para4").innerHTML ="(after selecting words):";
   document.getElementById("reform").innerHTML="<input type='reset' value='Re-form the sentence' onclick='rearrange(sru)'>";
    if(len!==0)
    {
@@ -150,45 +144,40 @@ function check(num)
         count++;
         //m++;
     }
-    
-      
-     
-
-
-   // console.log(len);
-    //console.log(count);
+   console.log(sru.length);
+    console.log(count);
     if(sru.length==count){
-      document.getElementById("correct").innerHTML="<input type='submit' value='Check the correctness of this sentence' onclick='myFunction()'>";
-      
-      
+      document.getElementById("correct").innerHTML="<input type='submit' value='Check the correctness of this sentence' onclick='myFunction(original)'>";  
     }
-  
-
-       
-
-       
-      
 }
 function rearrange(sru)
 {
-  document.getElementById("myDIV").innerHTML="";
-  document.getElementById("para3").innerHTML ="";
-  document.getElementById("para4").innerHTML ="";
-  document.getElementById("reform").innerHTML ="";
-  document.getElementById("more").innerHTML ="";
-  document.getElementById("correct").innerHTML ="";
-  str1=[];
-  count=0;
-  
+  myClear();
   for (var i = 0; i < sru.length; i++) {
     document.getElementById("more").innerHTML += "<button type='button' value='"+sru[i]+"' id='"+i+"' >" + sru[i]  + "</button>" + "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
   }
  
 }
-function myFunction(){
+function myFunction(original){
   var userString = str1.join(" ");
   console.log(userString);
+  var flag=0;
+  for(var k=0;k<original.length;k++){
+    if(original[k]==userString){
+      flag=1;
+      break;
+    }
   }
+  if(flag==1){
+    document.getElementById("result").innerHTML="Right answer!!!";
+    document.getElementById("result").style.color="green";
+
+  }
+  else{
+    document.getElementById("result").innerHTML="Wrong answer!!!";
+    document.getElementById("result").style.color="red";
+  }
+}
 
 
 

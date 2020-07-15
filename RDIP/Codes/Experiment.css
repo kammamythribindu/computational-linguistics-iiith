@@ -15,37 +15,46 @@ p
   margin-bottom: 0px;
  }
  #para1 {
-  font:18px Arial,sans-serif;
+  font:18px;
   color:rgb(10, 40, 180);
-  font-weight:550;
+  font-weight:bold;
+  font-family:'Lucida Sans Unicode';
   
 
 }
 #para2 {
-  font:16px Arial,sans-serif;
+  margin-top:0px;
+  font:8px ;
   color:blue;
   font-style:oblique;
+  font-family:'Lucida Sans Unicode';
   
 
 }
 #more
-{
+{ 
+  margin-top: -10px;
+  margin-bottom: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
  }
 #para3 {
-  font:18px Arial,sans-serif;
+  margin-top: -5px;
+  font:18px;
   color:rgb(10, 40, 180);
-  font-weight:550;
+  font-weight:bold;
+  font-family:'Lucida Sans Unicode';
 
   
 
 }
 #para4 {
-  font:16px Arial,sans-serif;
+  margin-top: -5px;
+  font:13px;
   color:blue;
   font-style:oblique;
+  font-family:'Lucida Sans Unicode';
 
   
 
@@ -79,6 +88,16 @@ h1
   margin:auto;
   border: none;
  }
+ #result
+ { 
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   margin:auto;
+   border: none;
+   font:30px verdana,sans-serif;
+  }
+  
  
  
  
