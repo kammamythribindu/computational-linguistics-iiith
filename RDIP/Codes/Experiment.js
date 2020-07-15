@@ -51,6 +51,7 @@ function myClear(){
   document.getElementById("para4").innerHTML ="";
   document.getElementById("correct").innerHTML ="";
   document.getElementById("result").innerHTML="";
+  document.getElementById("finalbutton").innerHTML="";
   str1=[];
   count=0;
 }
@@ -138,7 +139,7 @@ function check(num)
         arr.appendChild(t);
         document.getElementById("myDIV").appendChild(arr);
         var span = document.createElement("span");
-        span.innerHTML = "&nbsp;&nbsp;"; 
+        span.innerHTML = "&nbsp;"; 
         document.getElementById("myDIV").appendChild(span);
        // len--;
         count++;
@@ -176,6 +177,7 @@ function myFunction(original){
   else{
     document.getElementById("result").innerHTML="Wrong answer!!!";
     document.getElementById("result").style.color="red";
+    document.getElementById("finalbutton").innerHTML="<input type='submit' value='Get Correct Sentence'>";
   }
 }
 
