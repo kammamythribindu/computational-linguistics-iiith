@@ -1,0 +1,39 @@
+Goal1: UNDERSTAND THE EXPERIMENT.
+Functionalities that are required for Goal-1 are: 
+
+Functionality-1: EXPERIMENT tab--> on clicking should redirect to itself
+                 to the same page which contains a dropdown bar.
+
+Functionality-2: DropDown bar -->should contain 3 options to select.
+                 option 1 : Corpus 1
+                 option 2: Corpus 2
+                 option 3: Corpus 3
+                 When We select any of the above options,the respective passage of selected corpus appears.
+                 And a message “Enter the number of tokens and types for the above corpus:” is displayed.
+
+Functionality-3:A table with 2 rows '#types:' and '#tokens:' should be displayed after selecting any corpus.              
+
+Functionality-4: Clickable Submit button -->which on clicked gives feedback to our answers provided. 
+
+Functionality-5: 2 text input boxes inside the table ,where in the types and token inputs can be entered.
+
+Functionality-6: Clickable Continue button----> appears when entered the correct answer and on click redirect to next operations.
+
+Functionality-7: Color of input text boxes changes to red if the input is WRONG and color changes to green if input is correct.
+
+Functionality-8: A text of feedback--> display's on clicking the submit button.Shows 'Wrong Answer' or 'Right Answer'.
+
+Functionality-9: when Continue button is clicked, the right answer message and the submit button vanishes. 
+
+Functionality-10: A message “Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.” will be displayed. 
+
+Functionality-11: A box that says, #NewTypes---> It should have a text box to take new input.
+
+Functionality-12:Submit button -->Again appears and on click gives whether it is a wrong answer or right answer.
+
+Functionality-13: Pop-up/alert: Should display when no option for corpuses is selected ,saying that 'Select corpus'.                          
+
+
+
+
+ 
