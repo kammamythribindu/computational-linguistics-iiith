@@ -2,3 +2,9 @@ h2
 {
   font: 24px verdana,sans-serif;
 }
+.dropContainer
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
