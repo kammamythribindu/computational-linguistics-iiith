@@ -1,0 +1,80 @@
+h2
+{ 
+  margin-left:200px;
+  font: 24px verdana,sans-serif;
+}
+.dropContainer
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+select {
+    width: 150px;
+    height:20px;
+    margin: 10px;
+    font:20px;
+    color:rgba(0, 0, 0, 0.719);
+}
+select:focus {
+    min-width: 150px;
+    width: auto;
+}
+p
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+ #para1
+{
+  font:18px;
+  color:rgba(0, 0, 0, 0.699);
+  font-family:'Lucida Sans Unicode';
+  margin-bottom: 0px;
+  margin-top:5px;
+  margin-left:205px;
+  margin-right: 205px;
+}
+
+#para2
+ {
+  margin-top:4px;
+  font:18px;
+  color:rgba(0, 0, 0, 0.699);
+  font-family:'Lucida Sans Unicode';
+}
+/*table{
+    visibility:none;
+    border: 2px solid black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding:15px;
+
+}*/
+#myDIV
+{ 
+  visibility:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:6px;
+  
+}
+td{
+    height:47px;
+    width:82px;
+    padding:auto;
+    font:18px;
+    font-family:'Lucida Sans Unicode';
+    color:rgba(0, 0, 0, 0.699);
+}
+input{
+    width:68%;
+    height:60%;
+}
+
