@@ -9,6 +9,10 @@ function myClear(){
        document.getElementById("val2").value="";  
        document.getElementById("val1").style.backgroundColor="";
        document.getElementById("val2").style.backgroundColor="";
+       document.getElementById("para4").innerHTML="";
+       document.getElementById("para5").innerHTML="";
+       document.getElementById("final").innerHTML="";
+       document.getElementById("sub2").innerHTML="";
 }
 
 function dropfunc()   //executes after drop down selection
@@ -19,13 +23,13 @@ function dropfunc()   //executes after drop down selection
        {
        document.getElementById("para2").innerHTML = "Enter the number of tokens and types for the above corpus:";
        document.getElementById("myDIV").style.visibility="visible";
-       document.getElementById("sub").innerHTML= "<input type='submit' onclick='myFunction()' value='Submit'/>"
+       document.getElementById("sub").innerHTML= "<input type='submit' onclick='myFunction()' value='Submit' />"
        if(x=="corpus1")
        {
         myClear();       
         document.getElementById("para1").innerHTML = corpus1; 
         myTokens(corpus1);
-        uniqueWordCount(corpus1);
+        uniqueTypeCount(corpus1);
         //myFunction(T1,T2);
        }
        else if(x=="corpus2")
@@ -33,7 +37,7 @@ function dropfunc()   //executes after drop down selection
         myClear(); 
         document.getElementById("para1").innerHTML = corpus2;  
         myTokens(corpus2);
-        uniqueWordCount(corpus2);
+        uniqueTypeCount(corpus2);
         //myFunction(T1,T2);
        }
        else if(x=="corpus3")
@@ -41,7 +45,7 @@ function dropfunc()   //executes after drop down selection
         myClear();      
         document.getElementById("para1").innerHTML = corpus3; 
         myTokens(corpus3);
-        uniqueWordCount(corpus3);
+        uniqueTypeCount(corpus3);
         //myFunction(T1,T2);
        }
  
@@ -68,7 +72,7 @@ function myTokens(str)
        return tokLen;
 
 }
-function uniqueWordCount(str) { 
+function uniqueTypeCount(str) { 
        str[0].replace(/(^\s*)|(\s*$)/gi,"");
       // corpus1[0].replace(/[ ]{2,}/gi," ");
        str[0].replace(/\n /,"\n");
@@ -90,7 +94,7 @@ if((input1==global1)&&(input2==global2))
        document.getElementById("val2").style.backgroundColor = "green";
        document.getElementById("para3").innerHTML="Right Answer";
        document.getElementById("para3").style.color="green";
-       document.getElementById("continue").innerHTML="<input type='submit' value='Continue'/>";
+       document.getElementById("continue").innerHTML="<input type='submit' value='Continue' onclick='binFunc()'/>";
 
 
 }
@@ -115,6 +119,16 @@ else{
        document.getElementById("para3").style.color="red";
        document.getElementById("continue").innerHTML="";
 }
+}
+function binFunc()
+{
+       document.getElementById("para3").innerHTML="";
+       document.getElementById("continue").innerHTML="";
+       document.getElementById("sub").innerHTML="";
+       document.getElementById("para4").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.";
+       document.getElementById("para5").innerHTML="#new types:";
+       document.getElementById("final").innerHTML="<input id='finaltext' type='text'/>";
+       document.getElementById("sub2").innerHTML="<input type='submit' value='Submit'/>";
 }
 
      

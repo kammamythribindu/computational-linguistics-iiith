@@ -64,10 +64,15 @@ td{
     font-family:'Lucida Sans Unicode';
     color:rgba(0, 0, 0, 0.699);
 }
-input[type=text]{
+#val1{
     width:68%;
     height:60%;
     
+}
+#val2{
+  width:68%;
+  height:60%;
+  
 }
 
 
@@ -77,16 +82,63 @@ input[type=text]{
   align-items: center;
   justify-content: center;
   margin-top: 9px;
+  font:18px;
+  font:verdana,sans-serif;
 }
 #para3
 {
   display: flex;
   align-items: center;
   justify-content: center;
+  color:rgba(0, 0, 0, 0.699);
+  font-family:"proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+  font-weight: 500;
 }
 #continue
 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#para4
+{
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font:18px;
+  color:rgba(0, 0, 0, 0.699);
+  font-family:'Lucida Sans Unicode';
+}
+#para5
+{
+  margin-top: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font:18px;
+  color:rgba(0, 0, 0, 0.699);
+  font-family:'Lucida Sans Unicode';
+}
+#sub2
+{
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font:18px;
+  font:verdana,sans-serif;
+}
+#final{
+  margin-top:-3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#finaltext{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:66px;
+  height:19px;
 }
