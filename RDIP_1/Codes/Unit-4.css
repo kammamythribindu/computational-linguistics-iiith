@@ -46,15 +46,6 @@ p
   color:rgba(0, 0, 0, 0.699);
   font-family:'Lucida Sans Unicode';
 }
-/*table{
-    visibility:none;
-    border: 2px solid black;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding:15px;
-
-}*/
 #myDIV
 { 
   visibility:hidden;
@@ -66,15 +57,36 @@ p
   
 }
 td{
-    height:47px;
-    width:82px;
+    height:45px;
+    width:87px;
     padding:auto;
     font:18px;
     font-family:'Lucida Sans Unicode';
     color:rgba(0, 0, 0, 0.699);
 }
-input{
+input[type=text]{
     width:68%;
     height:60%;
+    
 }
 
+
+#sub
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9px;
+}
+#para3
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#continue
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
