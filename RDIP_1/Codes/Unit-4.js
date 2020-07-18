@@ -131,4 +131,13 @@ function binFunc()
        document.getElementById("sub2").innerHTML="<input type='submit' value='Submit'/>";
 }
 
+define(function (require) {
+       var Snowball = require ('snowball');
+   });
+var stemmer = new Snowball('English');
+stemmer.setCurrent('doing');    
+stemmer.stem();
+console.log(stemmer.getCurrent());
+
+
      
