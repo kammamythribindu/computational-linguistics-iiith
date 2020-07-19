@@ -1,0 +1,36 @@
+Goal-1: UNDERSTAND THE EXPERIMENT.
+Functionalities that are required for Goal-1 are: 
+
+Functionality-1: EXPERIMENT page--> which contains a dropdown bar.
+
+Functionality-2: DropDown bar-1 -->should contain 2 options to select.
+                 option 1 : English
+                 option 2: Hindi
+                 When We select any of the above options,another dropdown bar must be displayed. 
+
+Functionality-3:DropDown bar-2 -->should contain 5 sentences as options of the respective language selected.     
+
+Functionality-4: A table with a message -->A message 'Select the POS tag for corresponding words' displays along with a table with 4 columns and the number of rows are dependent on the 
+                                           number of words of the selected sentence,in which the first column should contain LEXICON,second column should contain POS and the other 2 columns are empty initially. 
+
+Functionality-5: DropDowns for each LEXICON -->should contain 8 options namely:
+                 option-1  : Noun
+                 option-2  : Pronoun
+                 option-3  : Verb
+                 option-4  : Adjective
+                 option-5  : Adverb
+                 option-6  : Determiner
+                 option-7  : Preposition
+                 option-8  : Conjunction
+                 option-9  : Interjection
+
+Functionality-6: Clickable Submit button----> appears along with the table and on clicking shows tick marks or wrong marks in the 3rd column.
+
+Functionality-7: Clickable 'Get Answers' button -->appears after clicking the submit button.
+
+Functionality-8: On clicking get answers button,the correct answers must be displayed in the 4th column of table,if all answers are correct no operation is performed.
+
+Functionality-9: The 'Get Answers' button on click changes to 'Hide Answer' button and the viceversa.During this operation the answers in the 4th column becomes hidden when hide answer is clicked and the answers become visible when get answers is clicked.
+
+Functionality-10: Pop-up/alert: Should display when no option for language/no option for sentences is selected ,saying that 'Select language'for language and 'Select a sentence' for sentences.                          
+
