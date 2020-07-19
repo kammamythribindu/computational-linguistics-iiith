@@ -3,3 +3,23 @@ h2
   margin-left:200px;
   font: 24px verdana,sans-serif;
 }
+.dropdownLang
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+Select {
+    width: 165px;
+    height:20px;
+    margin: 10px;
+    font-size:11pt;
+    color:rgba(0, 0, 0, 0.719);
+}
+#dropdownSent
+{ 
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
