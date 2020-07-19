@@ -13,6 +13,8 @@ function myClear(){
        document.getElementById("para5").innerHTML="";
        document.getElementById("final").innerHTML="";
        document.getElementById("sub2").innerHTML="";
+      // document.getElementById("finaltext").value="";  
+      // document.getElementById("finaltext").style.backgroundColor="";
        stemsArr=[];
 }
 
@@ -74,7 +76,7 @@ function myTokens(str)
        for(var z=0;z<tokens.length;z++)
  
        {
-              if(tokens[z]!='mouse'&&tokens[z]!='very'&&tokens[z]!='done'&&tokens[z]!='hungry'&&tokens[z]!='before'&&tokens[z]!='tried'&&tokens[z]!='""'&&tokens[z]!='carried'&&tokens[z]!='anyone'&&tokens[z]!='else'&&tokens[z]!='pleased'&&tokens[z]!='once'&&tokens[z]!='able'&&tokens[z]!='little'&&tokens[z]!='why'&&tokens[z]!='does'&&tokens[z]!='only'&&tokens[z]!='table'&&tokens[z]!='house')
+         if(tokens[z]!='mouse'&&tokens[z]!='very'&&tokens[z]!='done'&&tokens[z]!='hungry'&&tokens[z]!='before'&&tokens[z]!='tried'&&tokens[z]!='""'&&tokens[z]!='carried'&&tokens[z]!='anyone'&&tokens[z]!='else'&&tokens[z]!='pleased'&&tokens[z]!='once'&&tokens[z]!='able'&&tokens[z]!='little'&&tokens[z]!='why'&&tokens[z]!='does'&&tokens[z]!='only'&&tokens[z]!='table'&&tokens[z]!='house')
          {
                 mythri(binLang,tokens[z]);
          }
@@ -85,6 +87,7 @@ function myTokens(str)
      console.log(set1);
      console.log(set1.size-1); //as the new types array contains space included,we reduce the size by 1 count 
       // return tokLen;
+      global3=(set1.size)-1;
      
 
 }
@@ -143,7 +146,7 @@ function binFunc()
        document.getElementById("para4").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.";
        document.getElementById("para5").innerHTML="#new types:";
        document.getElementById("final").innerHTML="<input id='finaltext' type='text'/>";
-       document.getElementById("sub2").innerHTML="<input type='submit' value='Submit'/>";
+       document.getElementById("sub2").innerHTML="<input type='submit' value='Submit' onclick='finalTypes()'/>";
 }
 
 define(function (require) {
@@ -169,6 +172,17 @@ var Stem = function(binLang) {
        
      }
 
+function finalTypes()
+{
+       var finalInput=document.getElementById("finaltext").value;
+       if(finalInput==global3)
+       {
+              document.getElementById("finaltext").style.backgroundColor = "green";    
+       }
+       else{
+              document.getElementById("finaltext").style.backgroundColor = "red";
+       }
 
+}
 
      
