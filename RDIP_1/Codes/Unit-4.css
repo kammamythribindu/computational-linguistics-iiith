@@ -74,8 +74,6 @@ td{
   height:60%;
   
 }
-
-
 #sub
 {
   display: flex;
@@ -141,4 +139,12 @@ td{
   justify-content: center;
   width:66px;
   height:19px;
+}
+#para6
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:"proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+  font-weight: 500;
 }

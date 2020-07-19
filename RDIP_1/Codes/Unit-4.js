@@ -13,8 +13,7 @@ function myClear(){
        document.getElementById("para5").innerHTML="";
        document.getElementById("final").innerHTML="";
        document.getElementById("sub2").innerHTML="";
-      // document.getElementById("finaltext").value="";  
-      // document.getElementById("finaltext").style.backgroundColor="";
+       document.getElementById("para6").innerHTML="";
        stemsArr=[];
 }
 
@@ -33,7 +32,6 @@ function dropfunc()   //executes after drop down selection
         document.getElementById("para1").innerHTML = corpus1; 
         myTokens(corpus1);
         uniqueTypeCount(corpus1);
-        //myFunction(T1,T2);
        }
        else if(x=="corpus2")
        {
@@ -41,7 +39,6 @@ function dropfunc()   //executes after drop down selection
         document.getElementById("para1").innerHTML = corpus2;  
         myTokens(corpus2);
         uniqueTypeCount(corpus2);
-        //myFunction(T1,T2);
        }
        else if(x=="corpus3")
        {
@@ -49,11 +46,8 @@ function dropfunc()   //executes after drop down selection
         document.getElementById("para1").innerHTML = corpus3; 
         myTokens(corpus3);
         uniqueTypeCount(corpus3);
-        //myFunction(T1,T2);
        }
- 
-       
-       return true;
+        return true;
        }
        else
        {
@@ -66,26 +60,24 @@ function myTokens(str)
 { 
       var tokens=str[0].replace(/(^\s*)|(\s*$)/gi,"");
       tokens= tokens.replace(/\n /,"\n");
-       tokens=tokens.toLowerCase().split(/\W+/);
-       
+      tokens=tokens.toLowerCase().split(/\W+/);
       console.log(tokens);
       var tokLen=(tokens.length)-1;
       global1=tokLen;
-       console.log(tokLen);
-       var binLang="English";
-       for(var z=0;z<tokens.length;z++)
- 
-       {
+      console.log(tokLen);
+      var binLang="English";
+      for(var z=0;z<tokens.length;z++)
+      {
          if(tokens[z]!='mouse'&&tokens[z]!='very'&&tokens[z]!='done'&&tokens[z]!='hungry'&&tokens[z]!='before'&&tokens[z]!='tried'&&tokens[z]!='""'&&tokens[z]!='carried'&&tokens[z]!='anyone'&&tokens[z]!='else'&&tokens[z]!='pleased'&&tokens[z]!='once'&&tokens[z]!='able'&&tokens[z]!='little'&&tokens[z]!='why'&&tokens[z]!='does'&&tokens[z]!='only'&&tokens[z]!='table'&&tokens[z]!='house')
          {
                 mythri(binLang,tokens[z]);
          }
-       }
-       console.log(stemsArr);
+      }
+      console.log(stemsArr);
       console.log(stemsArr.length);
-     var set1=new Set(stemsArr);
-     console.log(set1);
-     console.log(set1.size-1); //as the new types array contains space included,we reduce the size by 1 count 
+      var set1=new Set(stemsArr);
+      console.log(set1);
+      console.log(set1.size-1); //as the new types array contains space included,we reduce the size by 1 count 
       // return tokLen;
       global3=(set1.size)-1;
      
@@ -100,9 +92,9 @@ function uniqueTypeCount(str) {
        var typLen=(set.size)-1;
        global2=typLen;
        console.log(typLen);
-      
        //return typLen;
 }
+
 function myFunction(){
 var input1=document.getElementById("val1").value;
 var input2=document.getElementById("val2").value;
@@ -113,8 +105,6 @@ if((input1==global1)&&(input2==global2))
        document.getElementById("para3").innerHTML="Right Answer";
        document.getElementById("para3").style.color="green";
        document.getElementById("continue").innerHTML="<input type='submit' value='Continue' onclick='binFunc()'/>";
-
-
 }
 else if((input1==global1)&&(input2!=global2)){
        document.getElementById("val1").style.backgroundColor = "green";
@@ -130,7 +120,8 @@ else if((input1!=global1)&&(input2==global2)){
        document.getElementById("para3").style.color="red";
        document.getElementById("continue").innerHTML="";
 }
-else{
+else
+{
        document.getElementById("val1").style.backgroundColor = "red";
        document.getElementById("val2").style.backgroundColor = "red";
        document.getElementById("para3").innerHTML="Wrong Answer";
@@ -138,6 +129,7 @@ else{
        document.getElementById("continue").innerHTML="";
 }
 }
+
 function binFunc()
 {
        document.getElementById("para3").innerHTML="";
@@ -161,26 +153,30 @@ define(function (require) {
 var Stem = function(binLang) {
        var Stemmer = new Snowball(binLang);
        return function(word) {
-         Stemmer.setCurrent(word);
-         Stemmer.stem();
-         return Stemmer.getCurrent();
+       Stemmer.setCurrent(word);
+       Stemmer.stem();
+       return Stemmer.getCurrent();
        }
      };
      function mythri(binLang, word){
-       console.log(new Stem(binLang)(word));
-       stemsArr.push(new Stem(binLang)(word));
+     console.log(new Stem(binLang)(word));
+     stemsArr.push(new Stem(binLang)(word));
        
-     }
+}
 
 function finalTypes()
 {
        var finalInput=document.getElementById("finaltext").value;
        if(finalInput==global3)
        {
-              document.getElementById("finaltext").style.backgroundColor = "green";    
+              document.getElementById("finaltext").style.backgroundColor = "green"; 
+              document.getElementById("para6").innerHTML="Right Answer";
+              document.getElementById("para6").style.color="green";   
        }
        else{
               document.getElementById("finaltext").style.backgroundColor = "red";
+              document.getElementById("para6").innerHTML="Wrong Answer";
+              document.getElementById("para6").style.color="red";
        }
 
 }
