@@ -83,7 +83,7 @@ function myTokens(str)
       console.log(stemsArr.length);
      var set1=new Set(stemsArr);
      console.log(set1);
-     console.log(set1.size-1);
+     console.log(set1.size-1); //as the new types array contains space included,we reduce the size by 1 count 
       // return tokLen;
      
 
