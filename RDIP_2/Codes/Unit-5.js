@@ -8,6 +8,7 @@ function dropfuncLang()   //executes after drop down selection
        {
            document.getElementById("para1").innerHTML ="";
            document.getElementById("myTab").innerHTML="";
+           document.getElementById("sub").innerHTML="";
            document.getElementById("SentSelect").value="---Select a sentence---";
             document.getElementById("dropdownSent").style.visibility="visible";
             document.getElementById("SentSelect").style.width="300px";
@@ -22,6 +23,7 @@ function dropfuncLang()   //executes after drop down selection
         {
             document.getElementById("para1").innerHTML ="";
             document.getElementById("myTab").innerHTML="";
+            document.getElementById("sub").innerHTML="";
            document.getElementById("SentSelect").value="---Select a sentence---";
             document.getElementById("dropdownSent").style.visibility="visible";
             document.getElementById("SentSelect").style.width="230px";
@@ -55,11 +57,12 @@ function dropfuncSent()
            document.getElementById("para1").innerHTML = "Select the POS tag for corresponding words";
            y=y.trim().split(' ');
            console.log(y);
-           document.getElementById("myTab").innerHTML = "<th>LEXICON</th><th>POS</th><th></th><th></th>";
+           document.getElementById("myTab").innerHTML = "<th style='width:70px;'>LEXICON</th><th style='width:100px;'>POS</th><th></th><th></th>";
            for(var i=0;i<y.length;i++){
-           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td style='width:70px;'>"+y[i]+"</td><td class='col-md-4' style='width:100px;'><div class='dropdown'><select class='dropdown-menu' style='width:100px;'><option>Noun</option><option>Pronoun</option><option>Verb</option><option>Adjective</option><option>Adverb</option><option>Determiner</option><option>Preposition</option><option>Conjunction</option><option>Interjection</option></select></div></td><td></td><td></td></tr>";
+           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td style='width:70px;'>"+y[i]+"</td><td class='col-md-4' style='width:100px;'><div class='dropdown'><select class='dropdown-menu' style='width:100px;'><option value='Noun' selected>Noun</option><option>Pronoun</option><option>Verb</option><option>Adjective</option><option>Adverb</option><option>Determiner</option><option>Preposition</option><option>Conjunction</option><option>Interjection</option></select></div></td><td></td><td></td></tr>";
           
             }
+            document.getElementById("sub").innerHTML="<input type='submit' onclick='binCheck()' value='Submit' />";
         }
         else if(y==hindi[0]||y==hindi[1]||y==hindi[2]||y==hindi[3]||y==hindi[4])
         {
@@ -68,9 +71,14 @@ function dropfuncSent()
            console.log(y);
            document.getElementById("myTab").innerHTML = "<th>LEXICON</th><th>POS</th><th></th><th></th>";
            for(var i=0;i<y.length;i++){
-           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td style='width:70px;'>"+y[i]+"</td><td class='col-md-4' style='width:100px;'><div class='dropdown'><select class='dropdown-menu' style='width:100px;'><option>Noun</option><option>Pronoun</option><option>Verb</option><option>Adjective</option><option>Adverb</option><option>Postposition</option><option>Conjunction</option><option>Interjection</option></select></div></td><td></td><td></td></tr>";
+           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td style='width:70px;'>"+y[i]+"</td><td class='col-md-4' style='width:100px;'><div class='dropdown'><select class='dropdown-menu' style='width:100px;'><option value='noun' selected>Noun</option><option>Pronoun</option><option>Verb</option><option>Adjective</option><option>Adverb</option><option>Postposition</option><option>Conjunction</option><option>Interjection</option></select></div></td><td></td><td></td></tr>";
           
             }
+            document.getElementById("sub").innerHTML="<input type='submit' onclick='binCheck()' value='Submit' />";
         }
     }
-}     
+}  
+function  binCheck()
+{
+    return;
+}   

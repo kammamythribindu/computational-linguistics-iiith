@@ -92,5 +92,12 @@ table tr th:last-child {
   margin-bottom: 0px;
   margin-right: 1px;
 }
+#sub
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px; 
+}
 
 
