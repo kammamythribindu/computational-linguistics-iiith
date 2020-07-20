@@ -46,12 +46,13 @@ p
 }
 table th{
   width:auto;
-  height:30px;
+  height:27px;
   color: #961b25;
     font-size: 16px;
     font-weight: normal;
     text-transform: uppercase;
     padding: 10px;
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans", Verdana,Arial,sans-serif;
 
 }
 td{
@@ -59,9 +60,11 @@ td{
     font-weight: normal;
     color:rgba(0, 0, 0, 0.699);
   font-family:'Lucida Sans Unicode';
-    padding: 10px;
+    padding: 8px;
     display:table-cell;
     vertical-align: baseline;
+    margin:0;
+    height:27px;
 }
 table {
   border-collapse: collapse;
@@ -83,6 +86,11 @@ table tr td:last-child,
 table tr th:last-child {
   border-right: 1px lightgrey;
 }
-
+.dropdown-menu{
+  margin-top: 0px;
+  margin-left: 1px;
+  margin-bottom: 0px;
+  margin-right: 1px;
+}
 
 

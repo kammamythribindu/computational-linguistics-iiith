@@ -8,6 +8,7 @@ function dropfuncLang()   //executes after drop down selection
        {
            document.getElementById("para1").innerHTML ="";
            document.getElementById("myTab").innerHTML="";
+           document.getElementById("SentSelect").value="---Select a sentence---";
             document.getElementById("dropdownSent").style.visibility="visible";
             document.getElementById("SentSelect").style.width="300px";
              document.getElementById("S1").innerHTML=english[0];
@@ -21,6 +22,7 @@ function dropfuncLang()   //executes after drop down selection
         {
             document.getElementById("para1").innerHTML ="";
             document.getElementById("myTab").innerHTML="";
+           document.getElementById("SentSelect").value="---Select a sentence---";
             document.getElementById("dropdownSent").style.visibility="visible";
             document.getElementById("SentSelect").style.width="230px";
             document.getElementById("S1").innerHTML=hindi[0];
@@ -41,20 +43,34 @@ function dropfuncLang()   //executes after drop down selection
 function dropfuncSent()
 {
     var y=document.getElementById("SentSelect").value;
+    console.log(y);
     if(y=='---Select a sentence---')
     {
         alert("Select a sentence");
         return false;
     }
     else
-    {
+    {      
+           if(y==english[0]||y==english[1]||y==english[2]||y==english[3]||y==english[4]){
            document.getElementById("para1").innerHTML = "Select the POS tag for corresponding words";
            y=y.trim().split(' ');
            console.log(y);
            document.getElementById("myTab").innerHTML = "<th>LEXICON</th><th>POS</th><th></th><th></th>";
            for(var i=0;i<y.length;i++){
-           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td>"+y[i]+"</td><td></td><td></td><td></td></tr>";
+           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td style='width:70px;'>"+y[i]+"</td><td class='col-md-4' style='width:100px;'><div class='dropdown'><select class='dropdown-menu' style='width:100px;'><option>Noun</option><option>Pronoun</option><option>Verb</option><option>Adjective</option><option>Adverb</option><option>Determiner</option><option>Preposition</option><option>Conjunction</option><option>Interjection</option></select></div></td><td></td><td></td></tr>";
           
+            }
+        }
+        else if(y==hindi[0]||y==hindi[1]||y==hindi[2]||y==hindi[3]||y==hindi[4])
+        {
+            document.getElementById("para1").innerHTML = "Select the POS tag for corresponding words";
+            y=y.trim().split(' ');
+           console.log(y);
+           document.getElementById("myTab").innerHTML = "<th>LEXICON</th><th>POS</th><th></th><th></th>";
+           for(var i=0;i<y.length;i++){
+           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td style='width:70px;'>"+y[i]+"</td><td class='col-md-4' style='width:100px;'><div class='dropdown'><select class='dropdown-menu' style='width:100px;'><option>Noun</option><option>Pronoun</option><option>Verb</option><option>Adjective</option><option>Adverb</option><option>Postposition</option><option>Conjunction</option><option>Interjection</option></select></div></td><td></td><td></td></tr>";
+          
+            }
         }
     }
 }     
