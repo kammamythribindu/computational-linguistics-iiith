@@ -23,3 +23,66 @@ Select {
     align-items: center;
     justify-content: center;  
 }
+p
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+#para1
+ {
+  margin-top:-3px;
+  font:8px ;
+  color:blue;
+  font-style:oblique;
+  font-family:'Lucida Sans Unicode';
+}
+#myDIV
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table th{
+  width:auto;
+  height:30px;
+  color: #961b25;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px;
+
+}
+td{
+    font-size: 17px;
+    font-weight: normal;
+    color:rgba(0, 0, 0, 0.699);
+  font-family:'Lucida Sans Unicode';
+    padding: 10px;
+    display:table-cell;
+    vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 2px solid #b2bbc0;
+}
+table tr:first-child th {
+  border-top: 1px lightgrey;
+}
+table tr:last-child td {
+  border-bottom: 1px lightgrey;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 1px lightgrey;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 1px lightgrey;
+}
+
+
+

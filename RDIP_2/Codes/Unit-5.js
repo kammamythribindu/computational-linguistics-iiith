@@ -6,7 +6,9 @@ function dropfuncLang()   //executes after drop down selection
        var x = document.getElementById("LangSelect").value;    //retrives the selected value
        if(x=="English")                           //checks the retrieved value
        {
-             document.getElementById("dropdownSent").style.visibility="visible";
+           document.getElementById("para1").innerHTML ="";
+           document.getElementById("myTab").innerHTML="";
+            document.getElementById("dropdownSent").style.visibility="visible";
             document.getElementById("SentSelect").style.width="300px";
              document.getElementById("S1").innerHTML=english[0];
              document.getElementById("S2").innerHTML=english[1];
@@ -17,6 +19,8 @@ function dropfuncLang()   //executes after drop down selection
         }
        else if(x=="Hindi")
         {
+            document.getElementById("para1").innerHTML ="";
+            document.getElementById("myTab").innerHTML="";
             document.getElementById("dropdownSent").style.visibility="visible";
             document.getElementById("SentSelect").style.width="230px";
             document.getElementById("S1").innerHTML=hindi[0];
@@ -36,10 +40,21 @@ function dropfuncLang()   //executes after drop down selection
 }
 function dropfuncSent()
 {
-    y=document.getElementById("SentSelect").value;
+    var y=document.getElementById("SentSelect").value;
     if(y=='---Select a sentence---')
     {
         alert("Select a sentence");
         return false;
     }
-}
+    else
+    {
+           document.getElementById("para1").innerHTML = "Select the POS tag for corresponding words";
+           y=y.trim().split(' ');
+           console.log(y);
+           document.getElementById("myTab").innerHTML = "<th>LEXICON</th><th>POS</th><th></th><th></th>";
+           for(var i=0;i<y.length;i++){
+           document.getElementById("myTab").innerHTML += "<tr id='"+i+"' ><td>"+y[i]+"</td><td></td><td></td><td></td></tr>";
+          
+        }
+    }
+}     
